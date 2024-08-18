@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Optien';
+    src: url('C:\Users\Agus\Desktop\Dorian Gray\fonts\Optien.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Optien', sans-serif;
+    color: #e0e0e0;
+    background-color: #1c1c1c;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    width: 80%;
+    left: 10%;
+    background-color: #333;
+    padding: 15px 0;
+    z-index: 1000;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: #e0e0e0;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+.navbar ul li a:hover {
+    color: #ffb6c1; /* Tono pastel suave */
+    background-color: #444;
+}
+
+.container {
+    margin-top: 120px; /* Ajustar para no tapar la barra de navegación */
+}
+
+.slide {
+    width: 80%;
+    height: 90vh;
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    transition: all 1s ease;
+    opacity: 0;
+    transform: translateY(50px);
+    background-color: #333;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.slide h1, .slide h2 {
+    font-size: 4em;
+    margin: 20px 0;
+    color: #e0e0e0;
+}
+
+.slide p {
+    font-size: 2em;
+    max-width: 90%;
+    text-align: center;
+    color: #d0d0d0;
+}
+
+.slide img {
+    max-width: 80%;
+    height: auto;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.05);
+}
+
+.text {
+    text-align: center;
+    padding: 20px;
+}
+
+blockquote {
+    font-size: 1.8em;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 15px;
+    max-width: 70%;
+    color: #f0f0f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#home {
+    background-color: #2b2b2b;
+    background-image: linear-gradient(to bottom, #2b2b2b, #4b4b4b);
+}
+
+#hedonism {
+    background-color: #4b4b4b;
+    background-image: linear-gradient(to bottom, #4b4b4b, #615d6c);
+}
+
+#consequences {
+    background-color: #615d6c;
+    background-image: linear-gradient(to bottom, #615d6c, #70587c);
+}
+
+#morality {
+    background-color: #70587c;
+    background-image: linear-gradient(to bottom, #70587c, #846794);
+}
+
+#impact {
+    background-color: #846794;
+    background-image: linear-gradient(to bottom, #846794, #9b74b4);
+}
