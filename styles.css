@@ -52,7 +52,7 @@ body {
 }
 
 .container {
-    margin-top: 120px;
+    margin-top: 150px;
 }
 
 .slide {
@@ -69,7 +69,7 @@ body {
 }
 
 .text {
-    width: 90%;
+    width: 80%;
     max-width: 1200px;
     min-height: 400px;
     background-color: rgba(51, 51, 51, 0.85);
@@ -143,22 +143,3 @@ blockquote {
     z-index: 1;
 }
 
-#home {
-    background-color: #2b2b2b;
-}
-
-#hedonism {
-    background-color: #4b4b4b;
-}
-
-#consequences {
-    background-color: #615d6c;
-}
-
-#morality {
-    background-color: #70587c;
-}
-
-#impact {
-    background-color: #846794;
-}
