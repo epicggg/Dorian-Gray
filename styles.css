@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'Optien';
-    src: url('./fonts/Optien.ttf') format('truetype');
+    font-family: 'Romanica';
+    src: url('./fonts/Romanica.ttf') format('truetype');
 }
 
 body {
-    font-family: 'Optien', sans-serif;
+    font-family: 'Romanica', sans-serif;
     color: #e0e0e0;
     background-color: #1c1c1c;
     margin: 0;
@@ -68,45 +68,46 @@ body {
     text-align: center;
 }
 
-.slide::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.text {
+    width: 80%;
     background-size: cover;
     background-position: center;
-    filter: blur(5px) brightness(0.5);
-    z-index: -1;
-}
-
-#home::before {
-    background-image: url('./images/home.jpg');
-}
-
-#hedonism::before {
-    background-image: url('./images/lord henry.jpg');
-}
-
-#consequences::before {
-    background-image: url('./images/dorian seeking experiences.jpg');
-}
-
-#morality::before {
-    background-image: url('./images/portrait change.jpg');
-}
-
-#impact::before {
-    background-image: url('./images/dorian actions.jpg');
-}
-
-.text {
-    max-width: 80%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
     background-color: rgba(51, 51, 51, 0.8);
     border-radius: 20px;
     padding: 40px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home .text {
+    background-image: url('./images/home.jpg');
+    filter: blur(5px) brightness(0.7);
+}
+
+#hedonism .text {
+    background-image: url('./images/lord henry.jpg');
+    filter: blur(5px) brightness(0.7);
+}
+
+#consequences .text {
+    background-image: url('./images/dorian seeking experiences.jpg');
+    filter: blur(5px) brightness(0.7);
+}
+
+#morality .text {
+    background-image: url('./images/portrait change.jpg');
+    filter: blur(5px) brightness(0.7);
+}
+
+#impact .text {
+    background-image: url('./images/dorian actions.jpg');
+    filter: blur(5px) brightness(0.7);
 }
 
 h1, h2 {
