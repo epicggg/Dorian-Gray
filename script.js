@@ -2,14 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slide');
     const navbarLinks = document.querySelectorAll('.navbar ul li a');
 
-    // Desplazamiento suave al hacer scroll con la rueda del mouse
-    let scrollTimeout;
+    // Desplazamiento suave al hacer scroll
     window.addEventListener('scroll', () => {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-            const currentSlideIndex = Math.round(window.scrollY / window.innerHeight);
-            activateSlide(currentSlideIndex);
-        }, 100);
+        const currentSlideIndex = Math.floor(window.scrollY / window.innerHeight);
+        activateSlide(currentSlideIndex);
     });
 
     // Función para activar la slide
