@@ -39,12 +39,13 @@ body {
     top: 20px;
     width: 80%;
     left: 10%;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 15px 0;
     z-index: 1000;
     text-align: center;
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s ease;
 }
 
 .navbar ul {
@@ -62,7 +63,7 @@ body {
     color: #e0e0e0;
     font-size: 1.8em;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
     padding: 10px 15px;
     border-radius: 15px;
 }
@@ -173,4 +174,3 @@ blockquote {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 1;
 }
-
