@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Optien';
-    src: url('./fonts/Romanica.ttf') format('truetype');
+    src: url('./fonts/Optien.ttf') format('truetype');
 }
 
 body {
-    font-family: 'Romanica', sans-serif;
+    font-family: 'Optien', sans-serif;
     color: #e0e0e0;
     background-color: #1c1c1c;
     margin: 0;
     padding: 0;
     text-align: center;
-    overflow-x: hidden; /* Previene el desplazamiento horizontal */
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -52,7 +52,7 @@ body {
 }
 
 .container {
-    margin-top: 120px; /* Ajustar para no tapar la barra de navegación */
+    margin-top: 120px;
 }
 
 .slide {
@@ -63,9 +63,9 @@ body {
     justify-content: center;
     align-items: center;
     padding: 40px;
-    transition: all 1s ease;
     position: relative;
     color: #f0f0f0;
+    text-align: center;
 }
 
 .slide::before {
@@ -77,7 +77,7 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
-    filter: blur(5px) brightness(0.5); /* Difuminado y oscurecimiento */
+    filter: blur(5px) brightness(0.5);
     z-index: -1;
 }
 
@@ -101,41 +101,34 @@ body {
     background-image: url('./images/dorian actions.jpg');
 }
 
-.slide h1, .slide h2 {
-    font-size: 4.5em;
+.text {
+    max-width: 80%;
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+h1, h2 {
+    font-size: 5em;
     margin: 20px 0;
     color: #e0e0e0;
 }
 
-.slide p {
+p {
     font-size: 2.5em;
-    max-width: 80%;
-    text-align: center;
     color: #d0d0d0;
 }
 
-.text {
-    max-width: 80%;
-    background-color: rgba(51, 51, 51, 0.8); /* Fondo semitransparente para resaltar texto */
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-    text-align: center;
-}
-
 blockquote {
-    font-size: 2em;
+    font-size: 2.2em;
     margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(34, 34, 34, 0.9); /* Fondo semitransparente más oscuro */
+    padding: 30px;
+    background-color: rgba(34, 34, 34, 0.9);
     border-radius: 15px;
     max-width: 70%;
     color: #f0f0f0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.slide img:hover {
-    transform: scale(1.05);
 }
 
 #home {
