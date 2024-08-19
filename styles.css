@@ -69,10 +69,12 @@ body {
 }
 
 .text {
-    width: 80%;
-    background-color: rgba(51, 51, 51, 0.8);
+    width: 90%;
+    max-width: 1200px;
+    min-height: 400px;
+    background-color: rgba(51, 51, 51, 0.85);
     border-radius: 20px;
-    padding: 40px;
+    padding: 60px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
@@ -91,7 +93,7 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
-    filter: blur(5px) brightness(0.5);
+    filter: blur(3px) brightness(0.8); /* Suave difuminado */
     border-radius: 20px;
     z-index: -1;
 }
