@@ -86,7 +86,7 @@ body {
     align-items: center;
     padding: 40px;
     position: relative;
-    color: #333;
+    color: #f0f0f0;
     text-align: center;
     opacity: 0;
     transform: translateY(20px);
@@ -149,19 +149,16 @@ body {
     background-image: url('./images/dorian actions.jpg');
 }
 
-h1, h2 {
-    font-size: 6em; /* Tamaño más grande para mejor visibilidad */
+h1, h2, p {
+    font-size: 6em; /* Tamaño grande para mejor visibilidad */
     margin: 20px 0;
-    color: #000; /* Color oscuro para mayor contraste */
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Añadir sombra para mejorar visibilidad */
+    color: #fff; /* Texto en blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra minimalista para mejorar visibilidad */
     z-index: 1; /* Asegura que el texto esté sobre la imagen */
 }
 
 p {
-    font-size: 3em; /* Tamaño más grande para mejor visibilidad */
-    color: #222; /* Color más oscuro para mayor contraste */
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6); /* Sombra ligera para mejorar visibilidad */
-    z-index: 1;
+    font-size: 3em; /* Tamaño grande para mejor visibilidad */
 }
 
 blockquote {
