@@ -70,10 +70,6 @@ body {
 
 .text {
     width: 80%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
     background-color: rgba(51, 51, 51, 0.8);
     border-radius: 20px;
     padding: 40px;
@@ -83,42 +79,54 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
-#home .text {
+.text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px) brightness(0.5);
+    border-radius: 20px;
+    z-index: -1;
+}
+
+#home .text::before {
     background-image: url('./images/home.jpg');
-    filter: blur(5px) brightness(0.7);
 }
 
-#hedonism .text {
+#hedonism .text::before {
     background-image: url('./images/lord henry.jpg');
-    filter: blur(5px) brightness(0.7);
 }
 
-#consequences .text {
+#consequences .text::before {
     background-image: url('./images/dorian seeking experiences.jpg');
-    filter: blur(5px) brightness(0.7);
 }
 
-#morality .text {
+#morality .text::before {
     background-image: url('./images/portrait change.jpg');
-    filter: blur(5px) brightness(0.7);
 }
 
-#impact .text {
+#impact .text::before {
     background-image: url('./images/dorian actions.jpg');
-    filter: blur(5px) brightness(0.7);
 }
 
 h1, h2 {
     font-size: 5em;
     margin: 20px 0;
     color: #e0e0e0;
+    z-index: 1; /* Asegura que el texto esté sobre la imagen */
 }
 
 p {
     font-size: 2.5em;
     color: #d0d0d0;
+    z-index: 1;
 }
 
 blockquote {
@@ -130,6 +138,7 @@ blockquote {
     max-width: 70%;
     color: #f0f0f0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 #home {
