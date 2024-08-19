@@ -150,20 +150,22 @@ body {
 }
 
 h1, h2 {
-    font-size: 4em;
+    font-size: 6em; /* Tamaño más grande para mejor visibilidad */
     margin: 20px 0;
-    color: #333;
+    color: #000; /* Color oscuro para mayor contraste */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Añadir sombra para mejorar visibilidad */
     z-index: 1; /* Asegura que el texto esté sobre la imagen */
 }
 
 p {
-    font-size: 2.2em;
-    color: #555;
+    font-size: 3em; /* Tamaño más grande para mejor visibilidad */
+    color: #222; /* Color más oscuro para mayor contraste */
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6); /* Sombra ligera para mejorar visibilidad */
     z-index: 1;
 }
 
 blockquote {
-    font-size: 2em;
+    font-size: 2.5em; /* Tamaño más grande para citas */
     margin: 20px auto;
     padding: 30px;
     background-color: rgba(245, 245, 245, 0.9);
@@ -173,4 +175,3 @@ blockquote {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
-
