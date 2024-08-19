@@ -23,15 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Cambio de colores de fondo al cambiar de apartado
     function changeBackgroundColor(index) {
         const colors = [
-            'linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d)',
-            'linear-gradient(135deg, #2b5876, #4e4376)',
-            'linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b)',
-            'linear-gradient(135deg, #00c6ff, #0072ff)',
-            'linear-gradient(135deg, #f46b45, #eea849)'
+            'linear-gradient(135deg, #f6d365, #fda085)',
+            'linear-gradient(135deg, #fbc2eb, #a6c1ee)',
+            'linear-gradient(135deg, #ffecd2, #fcb69f)',
+            'linear-gradient(135deg, #d4fc79, #96e6a1)',
+            'linear-gradient(135deg, #84fab0, #8fd3f4)'
         ];
         document.body.style.background = colors[index % colors.length];
         document.body.style.backgroundSize = '300% 300%';
-        document.body.style.animation = 'backgroundAnimation 15s ease infinite';
+        document.body.style.animation = 'backgroundAnimation 20s ease infinite';
     }
 
     // Funcionalidad del menú para ir a la sección correspondiente
