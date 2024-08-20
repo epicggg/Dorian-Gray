@@ -1,12 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slide');
     const navbarLinks = document.querySelectorAll('.navbar ul li a');
+    let currentSlideIndex = 0;
 
     // Desplazamiento suave al hacer scroll
     window.addEventListener('scroll', () => {
-        const currentSlideIndex = Math.floor(window.scrollY / window.innerHeight);
+        currentSlideIndex = Math.floor(window.scrollY / window.innerHeight);
         activateSlide(currentSlideIndex);
     });
+
+    // Desplazamiento automático cada 12 segundos
+    setInterval(() => {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        slides[currentSlideIndex].scrollIntoView({ behavior: 'smooth' });
+        activateSlide(currentSlideIndex);
+    }, 12000);
 
     // Función para activar la slide
     function activateSlide(index) {
@@ -38,8 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
     navbarLinks.forEach((link, index) => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
-            slides[index].scrollIntoView({ behavior: 'smooth' });
-            activateSlide(index);
+            currentSlideIndex = index;
+            slides[currentSlideIndex].scrollIntoView({ behavior: 'smooth' });
+            activateSlide(currentSlideIndex);
         });
     });
 
