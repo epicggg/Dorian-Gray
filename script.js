@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slide');
+    const navbar = document.querySelector('.navbar');
     const navbarLinks = document.querySelectorAll('.navbar ul li a');
     let currentSlideIndex = 0;
 
@@ -10,19 +11,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Desplazamiento automático cada 16 segundos
-setInterval(() => {
-    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-    slides[currentSlideIndex].scrollIntoView({ behavior: 'smooth' });
-    activateSlide(currentSlideIndex);
-}, 16000); // 16000ms = 16 segundos
+    setInterval(() => {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        slides[currentSlideIndex].scrollIntoView({ behavior: 'smooth' });
+        activateSlide(currentSlideIndex);
+    }, 16000);
 
-
-    // Función para activar la slide
+    // Función para activar la slide y manejar el navbar
     function activateSlide(index) {
         slides.forEach((slide, i) => {
             if (i === index) {
                 slide.classList.add('active');
                 changeBackgroundColor(i);
+                // Ocultar navbar después de la primera slide
+                if (i > 0) {
+                    navbar.classList.add('hidden');
+                } else {
+                    navbar.classList.remove('hidden');
+                }
             } else {
                 slide.classList.remove('active');
             }
@@ -43,6 +49,13 @@ setInterval(() => {
         document.body.style.animation = 'backgroundAnimation 20s ease infinite';
     }
 
+    // Mostrar el navbar al mover el cursor a la parte superior
+    document.addEventListener('mousemove', function(e) {
+        if (e.clientY < 50) {
+            navbar.classList.remove('hidden');
+        }
+    });
+
     // Funcionalidad del menú para ir a la sección correspondiente
     navbarLinks.forEach((link, index) => {
         link.addEventListener('click', (event) => {
@@ -53,6 +66,14 @@ setInterval(() => {
         });
     });
 
-    // Inicializa la primera slide como activa
+    // Inicializa la primera slide como activa y añade la línea de progreso
+    slides.forEach(slide => {
+        const progressLine = document.createElement('div');
+        progressLine.classList.add('progress-line');
+        progressLine.innerHTML = '<svg><path d="M 0,0 L 1400,0 L 1400,800 L 0,800 Z"></path></svg>';
+        slide.appendChild(progressLine);
+    });
+
     activateSlide(0);
 });
+
