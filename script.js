@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (i === index) {
                 slide.classList.add('active');
                 changeBackgroundColor(i);
-                resetProgressLine(slide);
                 // Ocultar navbar después de la primera slide
                 if (i > 0) {
                     navbar.classList.add('hidden');
@@ -67,20 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Inicializa la primera slide como activa y añade la línea de progreso
-    slides.forEach(slide => {
-        const progressLine = document.createElement('div');
-        progressLine.classList.add('progress-line');
-        progressLine.innerHTML = '<svg><path d="M 20,20 Q 700,0 1380,20 Q 1400,390 1380,760 Q 700,780 20,760 Q 0,390 20,20 Z"></path></svg>';
-        slide.appendChild(progressLine);
-    });
-
-    function resetProgressLine(slide) {
-        const progressPath = slide.querySelector('.progress-line path');
-        progressPath.style.animation = 'none';
-        progressPath.offsetHeight; /* trigger reflow */
-        progressPath.style.animation = null;
-    }
-
+    // Inicializa la primera slide como activa
     activateSlide(0);
 });
