@@ -163,8 +163,6 @@ h1, h2, p {
 
 p {
     font-size: 3em; /* Tamaño grande para mejor visibilidad */
-    color: #fff; /* Texto en blanco */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra minimalista para mejorar visibilidad */
 }
 
 blockquote {
@@ -178,3 +176,4 @@ blockquote {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
+
