@@ -9,12 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
         activateSlide(currentSlideIndex);
     });
 
-    // Desplazamiento automático cada 12 segundos
-    setInterval(() => {
-        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-        slides[currentSlideIndex].scrollIntoView({ behavior: 'smooth' });
-        activateSlide(currentSlideIndex);
-    }, 12000);
+    // Desplazamiento automático cada 16 segundos
+setInterval(() => {
+    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+    slides[currentSlideIndex].scrollIntoView({ behavior: 'smooth' });
+    activateSlide(currentSlideIndex);
+}, 16000); // 16000ms = 16 segundos
+
 
     // Función para activar la slide
     function activateSlide(index) {
