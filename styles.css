@@ -10,7 +10,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    overflow-x: hidden;
+    overflow: hidden; /* Evita el scroll manual */
     background: linear-gradient(135deg, #f6d365, #fda085);
     background-size: 300% 300%;
     animation: backgroundAnimation 20s ease infinite;
@@ -176,4 +176,3 @@ blockquote {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
-
