@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Inicializa la primera slide como activa
+    // Inicializa la primera slide como activa y centra el "HOME"
     activateSlide(0);
+    slides[0].scrollIntoView({ behavior: 'smooth' });  // Asegura que el HOME esté centrado al cargar la web
 });
