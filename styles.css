@@ -36,10 +36,10 @@ body {
 
 @keyframes borderAnimation {
     0% {
-        stroke-dasharray: 0, 1000;
+        stroke-dashoffset: 1000;
     }
     100% {
-        stroke-dasharray: 1000, 0;
+        stroke-dashoffset: 0;
     }
 }
 
@@ -186,7 +186,7 @@ blockquote {
     z-index: 1;
 }
 
-/* Estilo para la línea de progreso */
+/* Estilo para la línea de progreso en los bordes redondeados */
 .progress-line {
     position: absolute;
     top: 0;
@@ -207,6 +207,7 @@ blockquote {
     fill: none;
     stroke: #fff; /* Color de la línea */
     stroke-width: 6;
-    stroke-dasharray: 1000, 0;
-    animation: borderAnimation 16s linear infinite;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: borderAnimation 16s linear forwards;
 }
