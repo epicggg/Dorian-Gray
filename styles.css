@@ -34,15 +34,6 @@ body {
     }
 }
 
-@keyframes borderAnimation {
-    0% {
-        stroke-dashoffset: 1000;
-    }
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
 .navbar {
     position: fixed;
     top: 20px;
@@ -172,6 +163,8 @@ h1, h2, p {
 
 p {
     font-size: 3em; /* Tamaño grande para mejor visibilidad */
+    color: #fff; /* Texto en blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra minimalista para mejorar visibilidad */
 }
 
 blockquote {
@@ -184,30 +177,4 @@ blockquote {
     color: #333;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1;
-}
-
-/* Estilo para la línea de progreso en los bordes redondeados */
-.progress-line {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 40px;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.progress-line svg {
-    width: 100%;
-    height: 100%;
-}
-
-.progress-line path {
-    fill: none;
-    stroke: #fff; /* Color de la línea */
-    stroke-width: 6;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: borderAnimation 16s linear forwards;
 }
